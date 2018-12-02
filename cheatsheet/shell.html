@@ -1,33 +1,94 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Shell cheatsheet</title>
+    <title>Shell Cheatsheet</title>
   </head>
   <body>
-    <h1>Shell cheatsheet</h1>
-    <p>The  shell is a type of program called an interpreter,which commands to start <br> another process torun them</p>
+    <h1>Shell Cheatsheet</h1>
+    <ul>
+      <li>Machine is a physical computer and hardware (disks, keyboard, etc).</li>
+      <li>Runs an <em>operating system</em>, which manages access to everything.</li>
+      <li>You interact with the OS through the <em>Shell</em>.</li>
+      <li>You use the shell to tell the Operating System which programs to run,
+      it runs them.</li>
+      <li>The shell is just another program.</li>
+      <li>Two types of Shell</li>
+      <ul>
+        <li>Graphical</li>
+        <li>Command line</li>
+      </ul>
+    </ul>
+
+    <p>To open Command line</p>
+    <ul>
+      <li>Windows: Window key + <strong>cmd</strong></li>
+      <li>OSX:Command Key + <strong>Space</strong>, type <strong>terminal</strong></li>
+    </ul>
+
+    <h2>Anatomy of the command line</h2>
+    <pre>
+
+                         Option
+                           |
+      C:\Users\suman&gt; dir \w *.png
+              |        |        |
+            Prompt  Command  Argument
+      _______________________________________________
+                         Option
+                           |
+      macbook:~ suman$ ls -l *.png
+              |        |        |
+            Prompt  Command  Argument
 
 
+    </pre>
 
-     <ul><li>Print the wokring directory in your Terminal by using pwd on osx and cd on window.</p>
-         <li>List directory contents on osx is (ls)</li>
-         <li>(cd..)to go up in directory</li>
-         <li>(mkdir) dir to create a directory</li></ul>
-<table style="width:100%">
-  <tr>
-    <th>Print the working directories</th>
-    <th>pwd in OSX</th>
-  </tr>
-  </table>
-  <table>
-    <th>list directories contents</th>
-    </tr>
+    <h2>Shell Command line</h2>
+    <p>Also called the:</p>
+    <ul>
+      <li>Terminal</li>
+      <li>command Window</li>
+      <li>Command Prompt</li>
+      <li>Command line interface(CLI)</li>
+    </ul>
+
+    <h2>Example:</h2>
+    <table border="1">
+      <tr>
+        <th>Action</th>
+        <th>Windows</th>
+        <th>OSX</th>
+      </tr>
+      <tr>
+        <td>Print working directory</td>
+        <td>cd</td>
+        <td>pwd</td>
+      </tr>
+      <tr>
+        <td>List directory contents</td>
+        <td>dir</td>
+        <td>ls</td>
+      </tr>
+      <tr>
+        <td>Change to a subdirectory</td>
+        <td>cd dir</td>
+        <td>cd dir</td>
+      </tr>
+      <tr>
+        <td>Go up a directory</td>
+        <td>cd..</td>
+        <td>cd..</td>
+      </tr>
+      <tr>
+        <td>Create directory</td>
+        <td>mkdir dir</td>
+        <td>mkdir dir</td>
+      </tr>
+      <tr>
+        <td>Delete a directory</td>
+        <td>rmdir dir</td>
+        <td>rmdir dir</td>
+      </tr>
     </table>
-    <table>
-    <th></th>
-    <th></th>
-    <th></th>
-
-
   </body>
 </html>
