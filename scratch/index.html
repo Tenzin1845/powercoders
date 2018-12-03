@@ -1,69 +1,42 @@
 <!DOCTYPE html>
 <html>
- <head>
-   <title>My test page</title>
- </head>
+  <head>
+    <title>My test page</title>
+  </head>
 
- <body>
-   <h1>This is Heading</h1l>
+  <body>
+    <div id="header">
+      <img src="powercoders-logo-CMYK.svg" alt="powercoders">
+      <p><span class="nav">Home</span> : <span class="nav">Articles</span> : Article one</p>
+      <!-- This does *not* work -->
+    </div>
 
-   <ul><li>This is a single paragraph/li></ul>
-
-   <p><img src="html.jpg" alt="html"></p>
-  <p>These are few topics.</p>
-  <ul>
-    <li>.</li>
-
-    <li>So is this
+    <div id="content">
+      <p>the unordered list uses bullet points.</p>
       <ul>
-        <li>Lists can be nested inside each other.</li>
-
-        <li>And have more List items.</li>
+        <li>This is a list item</li>
+        <li>So is this
+          <ul>
+            <li>Lists can be nested inside each other</li>
+            <li>And have more list items</li>
+          </ul>
+        </li>
       </ul>
-    </li>
-  </ul>
-  <p>The ordered List uses number.</p>
-  <ol>
-    <li>This is List item.</li>
 
-    <li>So is this
+      <p>the unordered list uses bullet points.</p>
       <ol>
-        <li>Lists can be nested inside each other.</li>
-
-        <li>And have more List items.</li>
+        <li>This is a list item</li>
+        <li>So is this
+          <ol>
+            <li>Lists can be nested inside each other</li>
+            <li>And have more list items</li>
+          </ol>
+        </li>
       </ol>
-    </li>
-  </ol>
-  <div id="header">
-    <p>Article heading</p>
-</div>
+    </div>
+    <div id="footer">
+      <p>Author : <span class="author-name">Tenzin</span></p>
+    </div>
 
- <div id="content">
-   <p>Some content.</p>
-
-   <p>Some more content.</p>
- </div>
-
- <div id="footer">
-   <p>Author: Nik</p>
- </div>
- <did id="header">
-   <p>Article heading</p>
-
-   <p><span class="nav">Home</span> :
-     <span class="nav">Articles</span> :
-     Article one </p>
- </div>
-
- <div id="content">
-   <p>some content.</p>
-
-   <p>some more content.</p>
- </P>
-
- <div id="footer">
-   <p>Author:
-     <span class="author-name">Nik</span></p>
-   </div>
-   <p>you write a p tag like &lt;p&gt;.</p>
-   <p>you write an & entity like &amp;.amp.</p>
+  </body>
+</html>
