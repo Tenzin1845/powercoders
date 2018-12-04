@@ -41,7 +41,7 @@ p {
 
 
 p.warning {
-  background-color: red;
+  background-color: rgb(13, 83, 203);
   color: white;
   font-style: bold;
   padding: .5em 1em;
