@@ -1,11 +1,19 @@
 body{
   position:relative;
 }
-div{
-  border:1px solid black;
-  background-color: rgb(238,238,238);
+
+
+
+*{
+  background-color: rgba(20, 20, 18, 0.93);
   padding: .5em;
+  margin: .10em;
+  color: white;
+
+
 }
+
+
 #header{
   margin:1em;
 }
@@ -14,6 +22,7 @@ div{
   left: 18em;
   min-height: 50vh;
   width: calc(100% - 37em);
+
 }
 
 #secondary{
