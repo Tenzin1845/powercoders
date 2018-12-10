@@ -1,39 +1,39 @@
-body{
+body {
   position:relative;
 }
 
-
-
-*{
+* {
   background-color: rgba(20, 20, 18, 0.93);
   padding: .5em;
   margin: .10em;
   color: white;
-
-
 }
 
-
-#header{
+#header {
   margin:1em;
 }
-#content{
+#content {
   position:absolute;
   left: 18em;
   min-height: 50vh;
   width: calc(100% - 37em);
-
 }
 
-#secondary{
+#secondary {
   position: absolute;
   left: 1em;
   min-height: 50vh;
   width:15em;
 }
-#Teritiary{
+
+#teritiary {
   position: absolute;
   right: 1em;
   min-height: 50vh;
   width:15em;
+}
+
+h4 {
+  color: red;
+  font-style: bold;
 }
