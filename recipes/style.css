@@ -11,24 +11,30 @@ body {
 
 #header {
   margin:1em;
+  text-align: center;
+  font-size: 25px;
+
 }
+
 #content {
-  position:absolute;
-  left: 18em;
+  /* position:absolute;
+  left: 18em;  */
   min-height: 50vh;
   width: calc(100% - 37em);
 }
 
 #secondary {
-  position: absolute;
-  left: 1em;
+  /*position: absolute;
+  left: 1em;  */
+
   min-height: 50vh;
   width:15em;
 }
 
-#teritiary {
-  position: absolute;
-  right: 1em;
+#teritiary{
+  /* position: absolute;
+  right: 1em;  */
+
   min-height: 50vh;
   width:15em;
 }
@@ -36,4 +42,17 @@ body {
 h4 {
   color: red;
   font-style: bold;
+}
+
+.whole{
+  display: flex;
+}
+img{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+#first-para{
+  text-align: center;
+
 }
