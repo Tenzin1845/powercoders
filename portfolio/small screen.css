@@ -1,0 +1,30 @@
+h1, h2 {
+  background-color:rgba(0, 0, 0, 0.36);
+  padding: 10px;
+  color:rgba(4, 5, 5, 0.92);
+  border-radius: 10px;
+  margin-left: 1em;
+  font-family: 'Poppins', sans-serif;
+  display: inline-block;
+  min-width: 1em;
+}
+
+}
+body {
+  margin-left: 1.5em;
+  margin-right:1.5em;
+  font-size: 18px;
+
+
+}
+ p {
+  margin-left: 2em;
+  font-family: "Times New Roman",Times serif;
+
+}
+ul li{
+  line-height: 1.5em;
+}
+img {
+  size
+}
