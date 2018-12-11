@@ -1,9 +1,15 @@
 body {
   position:relative;
+  background-image: url("bkkk.jpg");
+
+  background-size:auto;
+  background-attachment: fixed;
+
+
 }
 
 * {
-  background-color: rgba(20, 20, 18, 0.93);
+  background-color: rgba(14, 14, 13, 0.3);
   padding: .5em;
   margin: .10em;
   color: white;
@@ -20,7 +26,7 @@ body {
   /* position:absolute;
   left: 18em;  */
   min-height: 50vh;
-  width: calc(100% - 37em);
+
 }
 
 #secondary {
@@ -28,7 +34,7 @@ body {
   left: 1em;  */
 
   min-height: 50vh;
-  width:15em;
+
 }
 
 #teritiary{
@@ -36,7 +42,7 @@ body {
   right: 1em;  */
 
   min-height: 50vh;
-  width:15em;
+  
 }
 
 h4 {
@@ -44,15 +50,14 @@ h4 {
   font-style: bold;
 }
 
-.whole{
-  display: flex;
-}
-img{
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
+
+
 #first-para{
   text-align: center;
 
+}
+img{
+  margin-left:auto;
+  margin-right: auto;
+  display: block;
 }

@@ -1,0 +1,11 @@
+p.large{
+  display:block;
+}
+h1{
+  background-color: grey;
+}
+
+#ingridents {
+  left:35%;
+  width:300px;
+}
