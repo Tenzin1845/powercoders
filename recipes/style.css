@@ -19,6 +19,8 @@ body {
   margin:1em;
   text-align: center;
   font-size: 25px;
+  position: sticky;
+  top: 0;
 
 }
 
@@ -42,7 +44,7 @@ body {
   right: 1em;  */
 
   min-height: 50vh;
-  
+
 }
 
 h4 {
