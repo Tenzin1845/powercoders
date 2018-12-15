@@ -3,8 +3,6 @@ body {
   background-image: url("mex.jpg");
   background-size:auto;
   background-attachment: fixed;
-
-
 }
 
 * {
@@ -27,23 +25,18 @@ body {
   /* position:absolute;
   left: 18em;  */
   min-height: 50vh;
-
 }
 
 #secondary {
   /*position: absolute;
   left: 1em;  */
-
-  min-height: 50vh;
-
+ min-height: 50vh;
 }
 
-#teritiary{
+#teritiary {
   /* position: absolute;
   right: 1em;  */
-
-  min-height: 50vh;
-
+ min-height: 50vh;
 }
 
 h4 {
@@ -51,13 +44,11 @@ h4 {
   font-style: bold;
 }
 
-
-
-#first-para{
+#first-para {
   text-align: center;
-
 }
-img{
+
+img {
   margin-left:auto;
   margin-right: auto;
   display: block;
