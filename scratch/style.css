@@ -1,11 +1,10 @@
 
-p{
+p {
   color: red;
   background-color: lightgrey;
   margin-left: 1em;
   margin-right: 1em;
 }
-
 
 p#footer {
   border-top: 1px solid black;
@@ -13,18 +12,19 @@ p#footer {
   padding-top: .5em;
   margin-left: 0;
 }
-p{
+
+p {
   color: red;
   background-color: lightgrey;
   margin-left: 1em;
   margin-right: 1em;
 }
 
-
 p em {
   font-style: normal;
   text-decoration: underline;
 }
+
 p#footer {
   border-top: 1px solid black;
   background-color: white;
@@ -38,8 +38,6 @@ p {
   margin-right: 1em;
 }
 
-
-
 p.warning {
   background-color: rgb(13, 83, 203);
   color: white;
@@ -48,13 +46,16 @@ p.warning {
   border-radius: 5px;
   text-shadow: 1px 1px 1px black;
 }
-p.warning::before{
+
+p.warning::before {
   content: "WARNING!:"
 }
-p em{
+
+p em {
   font-style: normal;
   text-decoration: underline;
 }
+
 p#footer {
   border-top: 1px solid black;
   background-color: white;
