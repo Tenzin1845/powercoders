@@ -15,7 +15,6 @@ ul.breadcrumb {
  ul.breadcrumb li:first-child::before {
    content: "";
  }
-}
 
 @media screen and (max-width: 600px) {
  ul.breadcrumb li::before {
@@ -40,4 +39,3 @@ ul.breadcrumb {
  ul.breadcrumb li:nth-child(n+4) {
    padding-left: 3em;
  }
-}

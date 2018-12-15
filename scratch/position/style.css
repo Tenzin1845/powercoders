@@ -1,8 +1,8 @@
 body{
   border:1px solid black;
   position:relative;
-
 }
+
 div {
   position: relative;
 }
@@ -10,7 +10,6 @@ div {
 .pos-static {
   position: static;
   background-color:yellow;
-
 }
 
 .pos-relative {
@@ -20,7 +19,8 @@ div {
   top:20px;
   left:10px;
 }
-.pos-absolute{
+
+.pos-absolute {
   position: absolute;
   background-color: red;
   color: white;

@@ -3,12 +3,15 @@ p, li, em {
   margin: .5em;
   color: white;
 }
+
 * {
   border: .5em solid rgba(0,0,0,.5);
 }
+
 p {
   background-color: blue;
 }
+
 li {
   background-color: red;
 }

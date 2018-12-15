@@ -4,7 +4,7 @@ function greet(name) {
   console.log('Hello, ' + name);
 }
 
-function setClass(event, className){
+function setClass(event, className) {
     let el =document.getElementById('mypara')
     el.className = className;
 }
