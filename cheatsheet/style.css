@@ -1,0 +1,19 @@
+h1, h2, h3 {
+  background-color:rgba(13, 255, 13,0.1);
+  padding: 5px;
+  color:rgba(255, 0, 0, 0.5);
+  border-radius: 10px;
+  font-style:italic;
+}
+
+  body {
+  margin: .5em;
+  font-family: 'Slabo 27px', serif;
+  }
+
+  p {
+    color: red;
+    background-color:pink;
+    margin-left: 1em;
+    margin-right: 1em;
+  }

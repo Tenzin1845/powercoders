@@ -1,68 +1,194 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>what i have learned Today</title>
+    <title> HTML Cheatsheet</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Overpass+Mono|Roboto+Condensed|Slabo+27px" rel="stylesheet">
   </head>
   <body>
+    <h1>HTML Cheatsheet</h1>
+    <p>HTML is not a programming language, it's a markup language,
+      and we use it to define the structure of the web page.
+    </p>
+    <dl class="example">
+      <dt>Example:</dt>
+      <dd>
+        <code><pre>
+             &lt;html&gt;
+              &lt;head&gt;
+                &lt;title&gt;My Website&lt;/title&gt;
+              &lt;/head&gt;
+              &lt;body&gt;
+               &lt;p&gt; This is a Paragraph.&lt;/p&gt;
+              &lt;/body&gt;
+            &lt;/html&gt;
 
-    <h1>What i have learned Today</h1>
-    <h3>HERE ARE THE TOPICS<h3>
+          </pre></code>
+      </dd>
+    </dl>
+
+    <div class="h2">
+      <h2>Elements</h2>
+      <p>An HTML file consists of one or more elements.</p>
+      <p>An element has mostly three main parts. (There are some exception also.)</p>
+
+      <ul>
+        <li>It begins with the start tag.</li>
+        <li>It ends with the end tag.</li>
+        <li>In between the start tag and the end tag is the element's content.</li>
+      </ul>
+      <dl class="example">
+        <dt>Example:</dt>
+        <dd><code>&lt;p&gt;This is a Paragraph&lt;/p&gt;</code></dd>
+      </dl>
+      <p>Each element has its own attribute and value.</p>
+      <dl class="example">
+        <dt>Example:</dt>
+        <dd><code>&lt;img src="image.jpeg" alt="My Image"&gt;</code></dd>
+      </dl>
+
+      <div class="h3">
+        <h3>Block-level Elements</h3>
+        <p>
+          A block-level element always starts on a new line and takes up the full width available
+          (stretches out to the left and right as far as it can).
+        </p>
+        <dl class="example">
+          <dt>Example:</dt>
+          <dd>
+            <ul>
+              <li>The <code>&lt;p&gt;</code> element is a block-level element.</li>
+            </ul>
+          </dd>
+        </dl>
 
 
-<ol>
-  <li>HTML 1</li>
-  <li>Version control 2</li>
-</ol>
-</div>
+        <h3>Inline Elements</h3>
+        <p>
+            An inline element does not start on a new line and only takes up as much width as necessary.
+        </p>
+        <dl class="example">
+          <dt>Example:</dt>
+          <dd>
+            <ul>
+              <li>The <code>&lt;em&gt;</code> is an inline element which renders as emphasized text.</li>
+              <li>The<code> &lt;img&gt;</code> is an inline element which is used to insert an image.</li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
+
+    </div>
+
+    <div class="h2">
+      <h2> HTML Lists</h2>
+
+      <div class="h3">
+        <h3>Ordered List</h3>
+        <p>
+          An ordered list starts with the <code>&lt;ol&gt;</code> tag. Each list item starts with the <code>&lt;li&gt;</code> tag.
+          The list items will be marked with numbers by default.
+        </p>
+        <dl class="example">
+          <dt>Example:</dt>
+          <dd>
+            <code>
+              <ol>
+                <li>Coffee</li>
+                <li>Tea</li>
+                <li>Milk</li>
+              </ol>
+            </code>
+          </dd>
+        </dl>
+
+      </div>
+
+      <div class="h3">
+        <h3>Unordered List</h3>
+        <p>
+          An unordered list starts with the &lt;ul&gt; tag. Each list item starts with the  &lt;li&gt; tag.
+            The list items will be marked with bullets (small black circles) by default.
+        </p>
+        <dl class="example">
+          <dt>Example:</dt>
+          <dd>
+            <code>
+              <ul style="list-style-type:disc">
+                <li>Coffee</li>
+                <li>Tea</li>
+                <li>Milk</li>
+              </ul>
+            </code>
+          </dd>
+        </dl>
+      </div>
 
 
-    <h3>Element P</h3>
-      <p>P stands for paragraph.</P>
-      <p>have to use at start of paragraph and close with end tag.</p>
-<div id="Nesting Elements">
-
-     <p>When element is nested &lt;p&gt;&lt;em&gt;&lt;/p&gt;inside the &lt;p&gt; element means "empahasis"
-        often shows in Italics.</p>
-</div>
-<ol>
-     <p>We also learned about Key Board Shortcuts</p>
-     <p><span class="nav">ctrl+s</span>:
-        <span class="nav">Atom save</span></P>
-
-     <p><span class="nav">ctrl+r</span>:
-        <span class="nav">chrome,reload</span></P>
-
-     <p><span class="nav">alt+tab</span>:
-        <span class="nav">switch apps</span></p>
-</ol>
- <h3>Images</h3>
-     <p> &lt;img src="name of file"alt=Image&gt;.</p>
-
- <h3>Block-level and inline Elements</h3>
-     <p>&lt;p&gt; &lt;em&gt; one &lt;/em&gt; &lt;em&gt; two &lt;/em&gt;
-       &lt;em&gt; three &lt;/em&gt; &lt;/p&gt;</P>
-     <p>&lt;p&gt; four  &lt;/p&gt;  &lt;p&gt; five &lt;/p&gt; &lt;p &gt; six
-       &lt;/p&gt;</p>
- <h3>Heading Level</h3>
-     <p>&lt;h1&gt;largest</p>
-     <p>&lt;h2&gt;</p>
-     <p>&lt;h3&gt;</p>
-     <p>&lt;h4&gt;</p>
-     <p>&lt;h5&gt;</p>
-     <p>&lt;h6&gt; smallest</p>
- <h3>div</h3>
-<ol>
- <li>div element is purely structural.</li>
- <li>Use it group blocks of related elements.</li>
- <li>Grouping making styling easier later.</li>
-</ol>
-
- <h3>Span</h3>
-    <p>span is also purely structural like &lt;div&gt; but for inline content.</p>
+    </div>
 
 
-    <p>Over all we have learn more then that but here are little summery about what i have learned.</P>
-    <p><em>happy</em> <em>excited </em>
-  <em>confused</em> at the same  time </p>
-</body>
+    <div class="h2">
+      <h2>Structure</h2>
+
+      <div class="h3">
+        <div class="div">
+          <h3>Div Element</h3>
+          <ul>
+            <li>div element is purely structural.</li>
+            <li>Use it to group blocks of related elements.</li>
+            <li>Grouping making styling easier later.</li>
+          </ul>
+          <dl class="example">
+            <dt>Example:</dt>
+            <dd>
+              <code>
+                <ul>
+                  <li>
+                    <p>&lt;div id="footer"&gt;</p>
+                    <p>&lt;p&gt;Author: Nik&lt;/p&gt;</p>
+                   <p>&lt;/div&gt;</p>
+                  </li>
+                </ul>
+              </code>
+            </dd>
+          </dl>
+
+        </div>
+
+        <div class="span">
+         <h3>Span Element</h3>
+         <ul>
+           <li>Span is also purely structural</li>
+           <li>Like div, but for inline content</li>
+         </ul>
+         <dl class="example">
+            <dt>Example:</dt>
+            <dd>
+              <code>
+                <ul>
+                  <li>
+                    <p>&lt;div id="footer"&gt;</p>
+                    <p>&lt;p&gt;Author:</p>
+                    <p>&lt;span class="author-name"&gt;Nik&lt;/span&gt;&lt;/p&gt;</p>
+                    <p>&lt;/div&gt;</p>
+                  </li>
+                </ul>
+              </code>
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    <div class="h2">
+      <h2>HTML &lt;a&gt; Tag</h2>
+      <p>The  <code>&lt;a&gt;</code> tag defines a hyperlink, which is used to link from one page to another.</p>
+      <dl class="example">
+        <dt>Example</dt>
+        <code><dd>&lt;a href="link"&gt;Click me&lt;/a&gt;</dd></code>
+      </dl>
+
+    </div>
+  </body>
 </html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Overpass+Mono|Roboto+Condensed|Slabo+27px" rel="stylesheet">
+  </head>
+  <body>
+    <h1>Cascading style Sheet Cheatsheet</h1>
+    <div class="h2">
+      <h2>Introducing styling to the web</h2>
+      <ul>
+        <li>HTML says "What it is", not "What it should look like"</li>
+        <li>Cascading Style Sheets (CSS) say what it should look like</li>
+      </ul>
+
+      <h2>CSS Rule</h2>
+      <pre class="coding">
+
+        <span class="selector">selector</span> {
+        <span class="property">property_1</span>: <span class="value">value_1</span>;
+        <span class="property">property_2</span>: <span class="value">value_2</span>;
+        <span class="property">property_3</span>: <span class="value">value_3</span>;
+        ...
+        }
+
+      </pre>
+
+      <h2>Link CSS file to HTML File</h2>
+      <ul>
+        <li>Add link tag to link CSS file to HTML file</li>
+        <li>Syntax:<code>&lt;link rel="stylesheet" type="text/css" href="style.css"&gt;</code></li>
+      </ul>
+
+      <h2>CSS Selectors</h2>
+      <p>Selecting all elements of a particular type</p>
+      <pre class="coding">
+
+        <span class="selector">p</span> {
+        <span class="property">color</span>: <span class="value">red</span>;
+        <span class="property">background-color</span>: <span class="value">lightgrey</span>;
+        <span class="property">margin-left</span>: <span class="value">1em</span>;
+        }
+
+      </pre>
+
+      <h2>Styling one element using id</h2>
+      <ul>
+        <li>All elements support the id attribute.</li>
+        <li>Value must be unique in the HTML</li>
+      </ul>
+      <pre class="coding">
+
+        <span class="selector">p#id-name</span> {
+        <span class="property">color</span>: <span class="value">red</span>;
+        <span class="property">background-color</span>: <span class="value">lightgrey</span>;
+        <span class="property">margin-left</span>: <span class="value">1em</span>;
+        }
+
+      </pre>
+
+      <h2>Styling the elements using class</h2>
+      <ul>
+        <li>All elements support the class attribute.</li>
+        <li>Value does not need to be unique in the HTML</li>
+      </ul>
+      <pre class="coding">
+
+        <span class="selector">p.class-name</span> {
+        <span class="property">color</span>: <span class="value">red</span>;
+        <span class="property">background-color</span>: <span class="value">lightgrey</span>;
+        <span class="property">margin-left</span>: <span class="value">1em</span>;
+        }
+
+      </pre>
+
+      <h2>Styling elements based on container</h2>
+      <pre class="coding">
+
+        <span class="selector">p em</span> {
+        <span class="property">color</span>: <span class="value">red</span>;
+        <span class="property">background-color</span>: <span class="value">lightgrey</span>;
+        <span class="property">margin-left</span>: <span class="value">1em</span>;
+        }
+
+      </pre>
+      <p>Here CSS will be applied to all the &lt;em&gt; element which is nested inside
+       &lt;p&gt; element</p>
+
+       <h2>CSS Color</h2>
+       <p>We can specify CSS Color value in the following way:</p>
+       <ul>
+         <li>
+           Color Names
+           <pre class="coding">
+
+             <span class="selector">p em</span> {
+             <span class="property">color</span>: <span class="value">red</span>;
+             }
+
+           </pre>
+         </li>
+         <li>
+           rgb(r,g,b) - rgb(red_value, green_value, blue_value)
+           <pre class="coding">
+
+             <span class="selector">p em</span> {
+             <span class="property">color</span>: <span class="rgb">rgb</span><span class="value">(185, 61, 244);</span>
+             }
+
+           </pre>
+         </li>
+         <li>
+           rgba(r, g, b, a) - rgb(red_value, green_value, blue_value, alpha_value)
+           <pre class="coding">
+
+             <span class="selector">p em</span> {
+             <span class="property">color</span>: <span class="rgb">rgba</span><span class="value">(185, 61, 244, .67);</span>
+             }
+
+           </pre>
+         </li>
+         <li>
+           With hexadecimal digits
+           <pre class="coding">
+
+             <span class="selector">p em</span> {
+             <span class="property">color</span>: <span class="rgb">rgba</span><span class="value">#b93df4;</span>
+             }
+
+           </pre>
+         </li>
+       </ul>
+    </div>
+   </body>
+</html>
