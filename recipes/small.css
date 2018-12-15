@@ -1,6 +1,7 @@
 body {
   position:relative;
   background-image: url("mex.jpg");
+
   background-size:auto;
   background-attachment: fixed;
 
@@ -20,6 +21,7 @@ body {
   font-size: 25px;
   position: sticky;
   top: 0;
+  color: yellow;
 
 }
 
@@ -57,9 +59,9 @@ h4 {
   text-align: center;
 
 }
-img{
-  margin-left:auto;
+img {
   margin-right: auto;
   display: block;
   border-radius: 50%;
+  margin-left:auto;
 }
