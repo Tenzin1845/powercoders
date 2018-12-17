@@ -8,8 +8,10 @@
     <link rel="stylesheet" type="text/css" href="large.css" media="screen and (min-width: 960px)">
     <link rel="stylesheet" type="text/css" href="xlarge.css" media="screen and (min-width: 1200px)">
     <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+    <script src="recipe.js"></script>
 
  </head>
+
  <body>
    <div id="header">CHICKPEAS SALAD</div>
      <p><img src="chickpea salad.JPG" width="300" height="300"  alt="Salad"></p>
@@ -20,7 +22,12 @@
      <p>I eat this mostly during a hot summer days  with glass of white Chardonay.</p>
 
    <div class="ingridents">
-     <ul>
+       <h1> <span id="hide-list" class="show" onclick="hide(event);">v</span>
+           <span id="show-list" class="hide" onclick="show(event);">&gt;</span>
+           Ingredients</h1>
+
+
+       <ul id="ingredient-list">
         <li>Chickpeas</li>
         <li>Avacado</li>
         <li>onions</li>

@@ -54,3 +54,20 @@ img {
   border-radius: 50%;
   margin-left:auto;
 }
+
+span.show {
+  display: inline-block;
+  width: 1em;
+}
+
+span.hide {
+  display: none;
+}
+
+ul.show {
+  display: block;
+}
+
+ul.hide {
+  display: none;
+}

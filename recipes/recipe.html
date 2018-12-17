@@ -9,8 +9,8 @@
    <link rel="stylesheet" type="text/css" href="medium screen.css" media="screen and (min-width: 600px)">
    <link rel="stylesheet" type="text/css" href="large screen.css" media="screen and (min-width: 960px)">
    <link rel="stylesheet" type="text/css" href="xlarge screen.css" media="screen and (min-width: 1200px)">
-
-   <meta name= "viewport" conetent="width=device-width">
+    <script src="recipe.js"></script>
+   <meta name= "viewport" content="width=device-width">
 
 </head>
 <body>
@@ -25,8 +25,12 @@
       the modern era to feed the large population of vegatraian.</p>
   </div>
 
-   <div id="secondary">Ingridents
-      <ul>
+   <div id="secondary">
+       <h1> <span id="hide-list" class="show" onclick="hide(event);">v</span>
+           <span id="show-list" class="hide" onclick="show(event);">&gt;</span>
+           Ingredients</h1>
+
+      <ul id="ingredient-list">
        <li>white Flour</li>
        <li>Minced Meat</li>
        <li>onions/shallots</li>

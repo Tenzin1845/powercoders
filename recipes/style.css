@@ -1,6 +1,6 @@
 body {
   position:relative;
-  background-image: url("mex.jpg");
+  background-image: url("bkkk.jpg");
   background-size:auto;
   background-attachment: fixed;
 }
@@ -53,4 +53,21 @@ img {
   margin-right: auto;
   display: block;
   border-radius: 50%;
+}
+
+span.show {
+  display: inline-block;
+  width: 1em;
+}
+
+span.hide {
+  display: none;
+}
+
+ul.show {
+  display: block;
+}
+
+ul.hide {
+  display: none;
 }
