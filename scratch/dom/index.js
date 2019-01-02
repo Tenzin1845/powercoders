@@ -9,21 +9,21 @@ console.log('fgfhg');
  }
 
 function addlist() {
-    let elUl = document.createElement('ul');
+    let el2Ul = document.createElement('ul');
     let elLi1 = document. createElement('li');
-    let li1Content = document.createTextNode('hello');
+    let li1Content = document.createTextNode('first');
     elLi1.appendChild(li1Content);
     elUl.appendChild(elLi1);
     let elLi2 = document.createElement('li');
-    let li2Content = document.createTextNode('no ');
+    let li2Content = document.createTextNode('this is ');
     elLi2.appendChild(li2Content);
     elUl.appendChild(elLi2);
     let  elLi3 = document.createElement('li');
-    let li3Content = document.createTextNode('bye');
+    let li3Content = document.createTextNode('third');
     elLi3.appendChild(li3Content);
     elUl.appendChild(elLi3);
     let elEm =document.createElement('em');
-    let emContent = document.createTextNode('yes');
+    let emContent = document.createTextNode('emphasised');
     elEm.appendChild(emContent);
     elLi2.appendChild(elEm);
     let elBody = document.getElementById('body');
