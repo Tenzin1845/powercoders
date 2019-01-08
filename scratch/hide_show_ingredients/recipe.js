@@ -1,13 +1,13 @@
 function hide(event) {
-    setClass('hide-list', 'hide');
-    setClass('ingredient-list', 'hide');
-    setClass('show-list', 'show');
+    setClass('hide-list', 'hidden');
+    setClass('ingredient-list', 'hidden');
+    setClass('show-list', '');
 }
 
 function show(event) {
-    setClass('hide-list', 'show');
-    setClass('ingredient-list', 'show');
-    setClass('show-list', 'hide');
+    setClass('hide-list', '');
+    setClass('ingredient-list', '');
+    setClass('show-list', 'hidden');
 }
 
 function setClass(id, className) {

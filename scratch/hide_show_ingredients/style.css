@@ -1,16 +1,11 @@
-span.show {
+span {
     display: inline-block;
     width: 1em;
 }
 
-span.hide {
+.hidden {
     display: none;
 }
 
-ul.show {
-    display: block;
-}
 
-ul.hide {
-    display: none;
-}
+
