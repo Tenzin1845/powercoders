@@ -7,7 +7,6 @@ function addItem(itemName) {
   button.innerText = 'delete';
 
   button.addEventListener('click', function (event) {
-    console.log('delete button clicked: ' + itemName);
     li.remove();
   });
 
@@ -19,23 +18,19 @@ function addItem(itemName) {
 
     document.addEventListener('DOMContentLoaded', function (event) {
     document.querySelector('button').addEventListener('click', function (event) {
-
-
-    console.log('The button was clicked');
-    let el = document.getElementById('item');
-    console.log(el.value);
-    let li = document.createElement('li');
-    li = addItem(el.value);
-    let ul = document.querySelector('ul');
-
-    ul.appendChild(li);
+      let inputbox = document.getElementById('item');
+      let li = addItem(inputbox.value);
+      document.querySelector('ul').appendChild(li);
 
 
     });
 
       document.querySelector('input').addEventListener('keyup', function (event) {
         if(event.key === 'Enter'){
-          console.log(event.key);
+          let inputbox = document.getElementById('item');
+          let li = addItem(inputbox.value);
+          document.querySelector('ul').appendChild(li);
+
         }
       });
 
