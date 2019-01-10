@@ -16,22 +16,20 @@ function addItem(itemName) {
 
 }
 
-    document.addEventListener('DOMContentLoaded', function (event) {
-    document.querySelector('button').addEventListener('click', function (event) {
+document.addEventListener('DOMContentLoaded', function (event) {
+  document.querySelector('button').addEventListener('click', function (event) {
+    let inputbox = document.getElementById('item');
+    let li = addItem(inputbox.value);
+    document.querySelector('ul').appendChild(li);
+    inputbox.value = '';
+  });
+
+  document.querySelector('input').addEventListener('keyup', function (event) {
+    if (event.key === 'Enter') {
       let inputbox = document.getElementById('item');
       let li = addItem(inputbox.value);
       document.querySelector('ul').appendChild(li);
-
-
-    });
-
-      document.querySelector('input').addEventListener('keyup', function (event) {
-        if(event.key === 'Enter'){
-          let inputbox = document.getElementById('item');
-          let li = addItem(inputbox.value);
-          document.querySelector('ul').appendChild(li);
-
-        }
-      });
-
+      inputbox.value = '';
+    }
+  });
 });
