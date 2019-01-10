@@ -19,6 +19,8 @@ function addItem(itemName) {
 
     document.addEventListener('DOMContentLoaded', function (event) {
     document.querySelector('button').addEventListener('click', function (event) {
+
+
     console.log('The button was clicked');
     let el = document.getElementById('item');
     console.log(el.value);
@@ -30,4 +32,11 @@ function addItem(itemName) {
 
 
     });
+
+      document.querySelector('input').addEventListener('keyup', function (event) {
+        if(event.key === 'Enter'){
+          console.log(event.key);
+        }
+      });
+
 });
