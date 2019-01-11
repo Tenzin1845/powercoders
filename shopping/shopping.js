@@ -1,9 +1,9 @@
 function addItem(itemName) {
-  let li = document.createElement('li');
-  let span = document.createElement('span');
+  const li = document.createElement('li');
+  const span = document.createElement('span');
   span.innerText = itemName;
   li.appendChild(span);
-  let button = document.createElement('button');
+  const button = document.createElement('button');
   button.innerText = 'delete';
 
   button.addEventListener('click', function (event) {
@@ -18,9 +18,9 @@ function addItem(itemName) {
 }
 
 document.addEventListener('DOMContentLoaded', function (event) {
-  let inputbox = document.getElementById('item');
-  let shoppingList = document.querySelector('ul');
-  let addItemButton = document.querySelector('button');
+  const inputbox = document.getElementById('item');
+  const shoppingList = document.querySelector('ul');
+  const addItemButton = document.querySelector('button');
   document.querySelector('button').addEventListener('click', function (event) {
     if (inputbox.value.trim() !== '') {
 
