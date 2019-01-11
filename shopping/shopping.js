@@ -8,6 +8,8 @@ function addItem(itemName) {
 
   button.addEventListener('click', function (event) {
     li.remove();
+    document.getElementById('item').focus();
+
   });
 
   li.appendChild(button);
@@ -17,23 +19,36 @@ function addItem(itemName) {
 }
 
 document.addEventListener('DOMContentLoaded', function (event) {
-  document.getElementById('item').focus();
+  let inputbox = document.getElementById('item');
+  let shoppingList = document.querySelector('ul');
+
+
   document.querySelector('button').addEventListener('click', function (event) {
-    let inputbox = document.getElementById('item');
-    let li = addItem(inputbox.value);
-    document.querySelector('ul').appendChild(li);
-    inputbox.value = '';
-    inputbox.focus;
+    if (inputbox.value.trim() !== '')
+
+
+    {
+
+
+      shoppingList.appendChild(addItem(inputbox.value.trim()));
+      inputbox.value = '';
+
+
+    }
+
+    inputbox.focus();
   });
 
-  document.querySelector('input').addEventListener('keyup', function (event) {
-
+  inputbox.addEventListener('keyup', function (event) {
     if (event.key === 'Enter') {
-      let inputbox = document.getElementById('item');
-      let li = addItem(inputbox.value);
+      if (inputbox.value.trim() !== '') {
+        shoppingList.appendChild(addItem(inputbox.value.trim()));
+        inputbox.value = '';
 
-      document.querySelector('ul').appendChild(li);
-      inputbox.value = '';
+      }
+
     }
   });
+  inputbox.focus();
 });
+
