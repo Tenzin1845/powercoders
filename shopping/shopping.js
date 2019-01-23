@@ -1,3 +1,10 @@
+/**
+ * Creates and returns an 'li' element for inclusion in the shopping list.
+ *
+ * @param {string} itemName name of the item to add to the list
+ * @returns {HTMLElement} li element
+ */
+
 function addItem(itemName) {
   const li = document.createElement('li');
   const span = document.createElement('span');
@@ -21,34 +28,43 @@ document.addEventListener('DOMContentLoaded', function (event) {
   const inputbox = document.getElementById('item');
   const shoppingList = document.querySelector('ul');
   const addItemButton = document.querySelector('button');
-  document.querySelector('button').addEventListener('click', function (event) {
-    if (inputbox.value.trim() !== '') {
 
-      shoppingList.appendChild(addItem(inputbox.value.trim()));
+
+
+  addItemButton.addEventListener('click', function (event) {
+    const trimmedValue = inputbox.value.trim();
+
+    if (trimmedValue === '') {
+      return;
+    }
+    shoppingList.appendChild(addItem(trimmedValue));
       inputbox.value = '';
       addItemButton.disabled = true;
-
-    }
-
-    inputbox.focus();
+      inputbox.focus();
 
   });
 
   inputbox.addEventListener('keyup', function (event) {
-    if (inputbox.value.trim() !== '') {
-      addItemButton.disabled = false;
-      if (event.key === 'Enter') {
+    const trimmedValue = inputbox.value.trim();
+    addItemButton.disabled = trimmedValue === '';
 
-        shoppingList.appendChild(addItem(inputbox.value.trim()));
-        inputbox.value = '';
+    if (trimmedValue === '') {
+      return;
+    }
+
+      if (event.key !== 'Enter') {
+        return;
       }
-    }
-    if(inputbox.value.trim() === ''){
-      addItemButton.disabled = true;
-    }
+
+
+    shoppingList.appendChild(addItem(trimmedValue));
+  inputbox.value = '';
+  addItemButton.disabled = true;
 
   });
+
   inputbox.focus();
   addItemButton.disabled = true;
 });
+
 
