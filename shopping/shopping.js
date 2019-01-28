@@ -27,8 +27,7 @@ function addItem(itemName) {
   return li;
 
 }
-
-document.addEventListener('DOMContentLoaded', function (event) {
+function domContentLoaded() {
   const inputbox = document.getElementById('item');
   const shoppingList = document.querySelector('ul');
   const addItemButton = document.querySelector('button');
@@ -46,10 +45,10 @@ document.addEventListener('DOMContentLoaded', function (event) {
       return;
     }
     shoppingList.appendChild(addItem(trimmedValue));
-      inputbox.value = '';
-      addItemButton.disabled = true;
-      clearAll.disabled =false;
-      inputbox.focus();
+    inputbox.value = '';
+    addItemButton.disabled = true;
+    clearAll.disabled =false;
+    inputbox.focus();
 
   });
 
@@ -71,21 +70,29 @@ document.addEventListener('DOMContentLoaded', function (event) {
       return;
     }
 
-      if (event.key !== 'Enter') {
-        return;
-      }
+    if (event.key !== 'Enter') {
+      return;
+    }
 
 
     shoppingList.appendChild(addItem(trimmedValue));
-  inputbox.value = '';
-  addItemButton.disabled = true;
-  clearAll.disabled = false;
+    inputbox.value = '';
+    addItemButton.disabled = true;
+    clearAll.disabled = false;
 
   });
 
   inputbox.focus();
   addItemButton.disabled = true;
   clearAll.disabled = true;
-});
+}
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', function (event) {
+    domContentLoaded();
+  });
+}else {
+  domContentLoaded();
+
+}
 
 
