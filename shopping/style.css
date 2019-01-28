@@ -24,3 +24,14 @@ body {
 
 
  }
+
+.delete {
+  color: red;
+  background-image: url("trash.png");
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+  border: none;
+  margin: 5px 10px 5px 10px;
+  border-radius: 50px;
+}
