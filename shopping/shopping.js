@@ -5,20 +5,32 @@
  * @returns {HTMLElement} li element
  */
 
-function addItem(itemName) {
+function addItem(itemName, quantity) {
   const li = document.createElement('li');
   const span = document.createElement('span');
   span.innerText = itemName;
   li.appendChild(span);
+
+
+
+  if (quantity !== '') {
+    const quantitySpan = document.createElement('span');
+    quantitySpan.innerText = '(' + quantity + ')';
+    li.appendChild(quantitySpan);
+  }
+
+
   const button = document.createElement('button');
   button.className = 'delete';
   li.appendChild(button);
 
   button.addEventListener('click', function (event) {
     li.remove();
+
+
     document.getElementById('item').focus();
 
-    document.querySelector('button#clear').disabled =
+    document.querySelector('button#deleteAll').disabled =
         document.querySelectorAll('li').length === 0;
 
   });
@@ -27,27 +39,26 @@ function addItem(itemName) {
   return li;
 
 }
+
 function domContentLoaded() {
   const inputbox = document.getElementById('item');
   const shoppingList = document.querySelector('ul');
   const addItemButton = document.querySelector('button');
   const clearAll = document.getElementById('deleteAll');
+  const quantity = document.getElementById('quantity');
   clearAll.disabled = true;
-
-
-
 
 
   addItemButton.addEventListener('click', function (event) {
     const trimmedValue = inputbox.value.trim();
-
+    const quantity = document.getElementById('quantity');
     if (trimmedValue === '') {
       return;
     }
-    shoppingList.appendChild(addItem(trimmedValue));
+    shoppingList.appendChild(addItem(trimmedValue,quantity.value.trim()));
     inputbox.value = '';
     addItemButton.disabled = true;
-    clearAll.disabled =false;
+    clearAll.disabled = false;
     inputbox.focus();
 
   });
@@ -63,6 +74,7 @@ function domContentLoaded() {
 
   inputbox.addEventListener('keyup', function (event) {
     const trimmedValue = inputbox.value.trim();
+    const quantity = document.getElementById('quantity');
     addItemButton.disabled = trimmedValue === '';
     clearAll.disabled = false;
 
@@ -75,7 +87,7 @@ function domContentLoaded() {
     }
 
 
-    shoppingList.appendChild(addItem(trimmedValue));
+    shoppingList.appendChild(addItem(trimmedValue, quantity.value.trim()));
     inputbox.value = '';
     addItemButton.disabled = true;
     clearAll.disabled = false;
@@ -86,11 +98,12 @@ function domContentLoaded() {
   addItemButton.disabled = true;
   clearAll.disabled = true;
 }
+
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', function (event) {
     domContentLoaded();
   });
-}else {
+} else {
   domContentLoaded();
 
 }
