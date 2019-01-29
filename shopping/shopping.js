@@ -57,6 +57,7 @@ function domContentLoaded() {
     }
     shoppingList.appendChild(addItem(trimmedValue,quantity.value.trim()));
     inputbox.value = '';
+    quantity.value = '';
     addItemButton.disabled = true;
     clearAll.disabled = false;
     inputbox.focus();
@@ -89,6 +90,30 @@ function domContentLoaded() {
 
     shoppingList.appendChild(addItem(trimmedValue, quantity.value.trim()));
     inputbox.value = '';
+    quantity.value = '';
+    addItemButton.disabled = true;
+    clearAll.disabled = false;
+
+  });
+
+  quantity.addEventListener('keyup', function (event) {
+    const trimmedValue = inputbox.value.trim();
+    const quantity = document.getElementById('quantity');
+    addItemButton.disabled = trimmedValue === '';
+    clearAll.disabled = false;
+
+    if (trimmedValue === '') {
+      return;
+    }
+
+    if (event.key !== 'Enter') {
+      return;
+    }
+
+
+    shoppingList.appendChild(addItem(trimmedValue, quantity.value.trim()));
+    inputbox.value = '';
+    quantity.value = '';
     addItemButton.disabled = true;
     clearAll.disabled = false;
 
