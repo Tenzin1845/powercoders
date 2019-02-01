@@ -6,21 +6,22 @@ function ShoppingListItem(name,quantity){
 /**
  * Creates and returns an 'li' element for inclusion in the shopping list.
  *
- * @param {ShoppingListItem} item name of the item to add to the list
+ *
  * @returns {HTMLElement} li element
  */
 
-function addItem(item) {
+ShoppingListItem.prototype.toListItem = function()  {
+
   const li = document.createElement('li');
   const span = document.createElement('span');
-  span.innerText = item.name;
+  span.innerText = this.name;
   li.appendChild(span);
 
 
 
-  if (item.quantity !== '') {
+  if (this.quantity !== '') {
     const quantitySpan = document.createElement('span');
-    quantitySpan.innerText = `(${item.quantity})`;
+    quantitySpan.innerText = `(${this.quantity})`;
     li.appendChild(quantitySpan);
   }
 
@@ -43,7 +44,7 @@ function addItem(item) {
   li.appendChild(button);
   return li;
 
-}
+};
 
 function domContentLoaded() {
   const inputbox = document.getElementById('item');
@@ -60,7 +61,9 @@ function domContentLoaded() {
     if (trimmedValue === '') {
       return;
     }
-    shoppingList.appendChild(addItem(trimmedValue,quantity.value.trim()));
+    const item = new ShoppingListItem(trimmedValue,quantity.value.trim());
+    shoppingList.appendChild(item.toListItem());
+
     inputbox.value = '';
     quantity.value = '';
     addItemButton.disabled = true;
@@ -75,14 +78,13 @@ function domContentLoaded() {
       el.remove();
     });
     clearAll.disabled = true;
-    inputBox.focus();
+    inputbox.focus();
   });
 
   inputbox.addEventListener('keyup', function () {
     const trimmedValue = inputbox.value.trim();
     const quantity = document.getElementById('quantity');
     addItemButton.disabled = trimmedValue === '';
-    clearAll.disabled = false;
     if (trimmedValue === '') {
       return;
     }
@@ -90,13 +92,8 @@ function domContentLoaded() {
     if (event.key !== 'Enter') {
       return;
     }
-    const item = {
-      name: trimmedValue,
-      quantity: quantity.value
-    };
-
-
-    shoppingList.appendChild(addItem(item));
+    const item = new ShoppingListItem(trimmedValue,quantity.value.trim());
+    shoppingList.appendChild(item.toListItem());
     inputbox.value = '';
     quantity.value = '';
     addItemButton.disabled = true;
@@ -108,7 +105,6 @@ function domContentLoaded() {
     const trimmedValue = inputbox.value.trim();
     const quantity = document.getElementById('quantity');
     addItemButton.disabled = trimmedValue === '';
-    clearAll.disabled = false;
 
     if (trimmedValue === '') {
       return;
@@ -118,12 +114,9 @@ function domContentLoaded() {
       return;
     }
 
-    const item = {
-      name: trimmedValue,
-      quantity: quantity.value
-    };
+    const item = new ShoppingListItem(trimmedValue,quantity.value.trim());
+    shoppingList.appendChild(item.toListItem());
 
-    shoppingList.appendChild(addItem(item));
     inputbox.value = '';
     quantity.value = '';
     addItemButton.disabled = true;
