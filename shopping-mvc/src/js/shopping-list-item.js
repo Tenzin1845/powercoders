@@ -30,16 +30,7 @@ class ShoppingListItem {
     button.className = 'delete';
     li.appendChild(button);
 
-    button.addEventListener('click', function () {
-      li.remove();
 
-
-      document.getElementById('item').focus();
-
-      document.querySelector('button#deleteAll').disabled =
-          document.querySelectorAll('li').length === 0;
-
-    });
 
     li.appendChild(button);
     return li;

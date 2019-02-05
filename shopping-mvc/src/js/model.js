@@ -1,21 +1,17 @@
 /**
  * Shopping list model.
  *
- *The list is modelled as an arrey.
+ *The list is modelled as an array.
  */
 class Model {
-  /**@param controller {!controller} App controller*/
+  /**@param controller {!Controller} App controller*/
   constructor(controller) {
 
     console.log('Model initialised');
 
     /**@private {!ShoppingListItem[]} Items in the List */
 
-    this.items_ = [
-    new ShoppingListItem('First item','q1'),
-    new ShoppingListItem('Second item','q2'),
-     new ShoppingListItem('Third item','q3')
-   ];
+    this.items_ = [];
 
     /**@private {!View} View for this model.*/
     this.view_ = new View(this,controller);
@@ -26,5 +22,20 @@ class Model {
   {
     return this.items_.slice();
 
+  }
+
+  /**
+   * Appends a new item to the List.
+   *
+   * @param item {!ShoppingListItem}
+   */
+  append(item) {
+    this.items_.push(item);
+    this.view_.update();
+  }
+
+  delete(i) {
+    this.items_.splice(i, 1);
+    this.view_.update();
   }
 }
