@@ -28,4 +28,11 @@ class Controller {
   deleteItem (i){
     this.model_.delete(i);
   }
+
+  /**
+   * clear the shopping List.
+   */
+  clearList() {
+    this.model_.clear();
+  }
 }
